@@ -50,6 +50,7 @@ process:
 [https://www.drupal.org/project/migrate_source_json](https://www.drupal.org/project/migrate_source_json)  
 
 ### 5. 啟動模組
+
 `drush en {{module_name}}`  
 
 `drush migrate-status`
@@ -81,6 +82,7 @@ Configuration name. [automated_cron.settings]:
 ```
 
 #### 刪除 modules 內與 migrate 相關資料夾
+
 ```
 contrib/migrate_plus
 contrib/migrate_source_json
