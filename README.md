@@ -1,10 +1,13 @@
 #Migrate task
 
-###1. 依據欲輸入的json內容建立新的 content type
+###1. 依據欲輸入的 json 結構建立新的 content type
+新增 content type，加入`post ID`與`email`兩個field
 
-###2. 在 `module/custom` 下建立新模組資料夾，將 [https://github.com/steveworley/migrate-d8](https://github.com/steveworley/migrate-d8) 內容檔案放入資料夾中
+###2. 新增模組資料夾與檔案
+在 `module/custom` 下建立新模組資料夾，將 [https://github.com/steveworley/migrate-d8](https://github.com/steveworley/migrate-d8) 內容檔案放入資料夾中
 
-###3. 修改`config/install/migrate_plus.migration.demo.yml`
+###3. 修改模組設定檔
+####`config/install/migrate_plus.migration.demo.yml`
 
 輸入來源的json網址
 
