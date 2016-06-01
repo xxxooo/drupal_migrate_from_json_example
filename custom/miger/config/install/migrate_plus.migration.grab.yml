@@ -1,0 +1,36 @@
+# Migration source for content
+id: grab
+label: Grab
+migration_group: UDN
+migration_dependencies: {}
+
+source:
+  plugin: json_source
+  path: http://jsonplaceholder.typicode.com/comments
+  headers:
+    Accept: 'application/json'
+  identifier: id
+  identifierDepth: 0
+  fields:
+    - id
+    - postId
+    - name
+    - email
+    - body
+
+destination:
+  plugin: entity:node
+
+process:
+  type:
+    plugin: default_value
+    default_value: combo
+
+  title: name
+  'body/value': body
+  'body/summary': body
+  'body/format':
+    plugin: default_value
+    default_value: full_html
+  field_email: email
+  field_post_id: postId
